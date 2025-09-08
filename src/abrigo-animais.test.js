@@ -34,7 +34,6 @@ describe('Abrigo de Animais', () => {
       'RATO,BOLA,LASER,CAIXA,NOVELO',
       'Rex,Mimi,Fofo,Zero,BOLA,BEBE'
     );
-    // Verifica se ambas as pessoas atingiram o limite de 3
     const adotadosPessoa1 = resultado.lista.filter(a => a.includes('pessoa 1')).length;
     const adotadosPessoa2 = resultado.lista.filter(a => a.includes('pessoa 2')).length;
       expect(adotadosPessoa1).toBeLessThanOrEqual(3);
@@ -44,7 +43,7 @@ describe('Abrigo de Animais', () => {
     const resultado = new AbrigoAnimais().encontraPessoas(
       'BOLA,LASER,RATO',
       'NOVELO,CAIXA',
-      'Mimi,Fofo' // Mimi (BOLA, LASER) e Fofo (BOLA, RATO, LASER)
+      'Mimi,Fofo'
     );
       expect(resultado.lista[0]).toBe('Fofo - abrigo');
       expect(resultado.lista[1]).toBe('Mimi - pessoa 1');
