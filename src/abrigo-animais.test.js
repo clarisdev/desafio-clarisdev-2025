@@ -46,8 +46,8 @@ describe('Abrigo de Animais', () => {
       'NOVELO,CAIXA',
       'Mimi,Fofo' // Mimi (BOLA, LASER) e Fofo (BOLA, RATO, LASER)
     );
-      expect(resultado.lista[0]).toBe('Fofo - abrigo'); // Fofo vai para o abrigo porque a pessoa 1 já adotou um gato com brinquedos em comum.
-      expect(resultado.lista[1]).toBe('Mimi - pessoa 1'); // Mimi é adotado primeiro.
+      expect(resultado.lista[0]).toBe('Fofo - abrigo');
+      expect(resultado.lista[1]).toBe('Mimi - pessoa 1');
       expect(resultado.erro).toBeFalsy();
   });
 
